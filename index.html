@@ -2,12 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
+    <link rel="icon shortcut bookmark" type="image/png" href="compress-bg/ico4.ico">
     <title>黄国保-修真院任务</title>
     <base target="_blank" />
     <style type="text/css">
         body{
-            background:url("https://unsplash.it/1600/900?random");
-            background-size: cover;
+            /*background:url("compress-bg/bg4.png");*/
+            /*background-size: cover;*/
             width: 80%;
             margin: 0 auto;
         }
@@ -32,10 +33,37 @@
 
     </style>
 </head>
-<body>
-    <h1>这里是简书demo</h1>
-    <div><a href="js-time/time-countDown.html">倒计时和获取时间的demo</a></div>
-
-
+<body class="bg">
+    <h1>CSS</h1>
+    <div><a href="css-task/task1.html">css1</a></div>
+    <div><a href="css-task/css task3.html">css3</a></div>
+    <div><a href="css-task/task-11/css-task-11.html">css4</a></div>
+    <div><a href="css-task/css task5.html">css5</a></div>
+    <div><a href="css-task/css task5-2.html">css6</a></div>
+    <div><a href="css-task/css task7-1.html">css7</a></div>
+    <div><a href="css-task/css-task8/task8-1.html">css8-1</a></div>
+    <div><a href="css-task/css-task8/css-task8-2.html">css8-2</a></div>
+    <div><a href="css-task/css-task8/css-task8-3.html"> css8-3</a></div>
+    <div><a href="css-task/css-task9/css-task10.html"> css10</a></div>
+    <div><a href="css-task/task-11/css-task-11.html"> css11</a></div>
+    <div><a href="css-task/task-12/css-task12.html"> css12</a></div>
+    <div><a href="css-task/task-13/task13-1.html"> css13</a></div>
+    <div><a href="css-task/task-15/task15.html"> css15</a></div>
+    <h1>JS</h1>
+    <div><a href="js-task/task1/js1.html">js1</a></div>
+    <div><a href="js-task/js2-4/js2/start.html">js2</a></div>
+    <div><a href="js-task/js2-4/js2/start.html">js2-4</a></div>
+    <script type="text/javascript">//产生随机背景图片
+    var bodyBgs = [];
+    for (var i = 1; i < 62; i++) {//注意图片数量
+        bodyBgs[i] = "compress-bg/bg"+i+".jpg";
+    };
+    var randomBgIndex = Math.round( Math.random() * 61 );//随机获取字符串标识，注意图片数量
+    console.log(randomBgIndex);
+    document.write('<style>.bg{width:100%;background:url(');
+    document.write(bodyBgs[randomBgIndex]);
+    document.write(');background-size: cover;}</style>');
+    //上面的三个字符串可以用“+”连接成一个字符串，这里因为位置原因我拆开写了。
+    </script>
 </body>
 </html>
