@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <title>倒计时和获取时间demo</title>
+    <style type="text/css">
+        body{
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        .box{
+            background: #29bde0;
+            text-align: center;
+            overflow: hidden;
+        }
+        .time{
+            text-align: right;
+            text-indent: 25rem;
+            display: inline-block;
+            font-size: 2rem;
+            color: #fff;
+        }
+        img{
+            display: inline-block;
+            padding: 2rem 0 0 0;
+        }
+        p{
+            padding: 3rem 0 7rem 0;
+            color: #fff;
+            font-size: 2.2rem;
+            font-weight: 500;
+        }
+        .id-box{
+            color: #fff;
+            font-size: 1.5rem;
+            text-align: center;
+            width: 20%;
+            margin: 0 auto;
+        }
+        #time,#date{
+            text-align: left;
+        }
+    </style>
+</head>
+<body onload="startTime()">
+<div class="box">
+    <div class="time">请等待<span id="dd">6</span>秒</div>
+    <!--设置时间长一点，不然一直跳转很烦-->
+    <img src="aaa.png" alt="启动页面图片"/>
+    <div class="id-box">
+        <div id="time"></div>
+        <div id="date"></div>
+    </div>
+
+    <p>更多·更全·更好用</p>
+    <script type="text/javascript">
+        function run(){
+            var s = document.getElementById("dd");//获取dd，并获得数字
+            if(s.innerHTML == 1){// 当dd==0的时候，跳转链接并且暂停函数
+                window.location.href = "https://www.baidu.com/index.php?tn=98012088_3_dg&ch=1";
+                clearInterval(run());//暂停setInterval调用的run()函数
+            }
+            s.innerHTML = s.innerHTML -1;//跑一秒减一个数字
+        }
+        window.setInterval("run();", 1000);// 一秒跑一次
+        /* innerHTML定义和用法
+         innerHTML 属性设置或返回表格行的开始和结束标签之间的 HTML（意思就是删除原来的样式，插入html的文字之类的）。*/
+        /*clearInterval定义和用法
+         clearInterval() 方法可取消由 setInterval() 设置的 timeout。（就是暂停）
+         clearInterval() 方法的参数必须是由 setInterval() 返回的 ID 值。（）*/
+        /*etInterval定义和用法
+         setInterval() 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式。
+         setInterval() 方法会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭。由 setInterval() 返回的 ID 值可用作 clearInterval() 方法的参数。*/
+        function checkTime(i){
+            if (i<10){
+                i = "0" + i;
+                //    当数值小于10的时候，在i前面加个0字符串。
+            }return i;
+        }
+        function startTime(){//onload事件
+            var today = new Date();
+            var y = today.getFullYear();
+            var month = today.getMonth();
+            //获取当前时间。get。
+            var d = today.getDate();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            // add a zero in front of numbers<10
+            month =checkTime(month+1);//因为月份是0-11月份,+1是把区间定在1-12月份，毕竟没有0月份，笑。
+            d = checkTime(d);
+            h =checkTime(h);
+            m =checkTime(m);
+            //将函数checkTime作用于时间变量，当变量小于10的时候将再变量前面加个字符串0
+            s =checkTime(s);
+            document.getElementById("time").innerHTML = h+":"+m+":"+s;//将实时时间结合字符串写出来。
+            document.getElementById("date").innerHTML = y+"/"+month+"/"+d;
+            t=setTimeout("startTime()",1000);//    每隔500毫秒刷新一下时间
+        }
+
+    </script>
+
+
+</div>
+</body>
+</html>
