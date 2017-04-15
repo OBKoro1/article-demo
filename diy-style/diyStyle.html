@@ -15,28 +15,30 @@
             margin: 2rem;
         }
         .slider-block{
-            outline: none;
+            outline: none; /*去掉点击时出现的外边框*/
             -webkit-appearance: none;
             -moz-appearance: none;
-            appearance: none;
+            appearance: none; /*这三个是去掉那条线原有的默认样式，划重点！！*/
             width: 30%;
             height: 0.3rem;
-            background: orange;
+            background: orange; /*这三个是设置滑块下面那条线的样式*/
         }
         input[type="range"]::-webkit-slider-thumb {
+            /*::-webkit-slider-thumb是代表给滑块的样式进行变更*/
             -webkit-appearance: none;
             -moz-appearance: none;
-            appearance: none;
-            -webkit-box-shadow:0 0 2px ;
+            appearance: none; /*//这三个是去掉滑块原有的默认样式，划重点！！*/
+            -webkit-box-shadow:0 0 2px ; /*设置滑块的阴影*/
             width: 2.6rem;
             height:1.6rem;
             background: url("images/js2-d_03.png");
-            background-size: cover;
+            background-size: cover; /*//这几个是设置滑块的样式*/
         }
         .task10-main-box-shape input[type="radio"]{
             display: none;
+            /*隐藏默认按钮的样式,这跟其他隐藏默认按钮的样式的方法不一样，注意一下*/
         }
-        .task10-main-box-shape label{
+        .task10-main-box-shape label{  /*这里是设置文字的样式*/
             display: inline-block;
             cursor: pointer;
             position: relative;
@@ -44,35 +46,39 @@
             margin-right: 6rem;
             font-size: 1.8rem;
             color: rgb(102,102,102);
+
         }
-        .task10-main-box-shape label:before {
+        .task10-main-box-shape label:before { /*这里是没被选中时候按钮的样式*/
             content: "";
+            /*将要自定义的东西设置为空的字符串，就可以往里面随意加定义的样式了*/
             display: inline-block;
-            background-color: #FFFFFF;
-            padding:0.45em;
+            background-color: #FFFFFF; /*设置背景*/
+            padding:0.45em; /*撑开背景，就是中间那块白色的*/
             border: 1px solid gray;
             margin-right: 10px;
             position: absolute;
             left: 0;
             bottom: 3px;
-            border-radius: 50%;
+            border-radius: 50%; /*设置圆角*/
+
         }
 
-        input[type=radio]:checked + label:before {
+        input[type=radio]:checked + label:before {/*按钮被选中之后的样式，多了一个checked*/
             font-size: 1px;
             color: #FFFFFF;
             border:0.7rem solid rgb(29,122,217);
+            /*设置按钮样式*/
         }
         .task10-main-box-row2-select{
             font-size: 1.6rem;
             color: rgb(153,153,153);
             padding: 0.3% 2% 0.3% 1%;
-            margin: 0;
-            background: url("images/task10-d_03.png") no-repeat 97%;
-            background-size:20%;
+            margin: 0; /*这里是选择框里面的样式*/
+            background: url("images/task10-d_03.png") no-repeat 97%; /*97%是设置图片，也就是三角形的位置*/
+            background-size:20%; /*背景图片的尺寸*/
             appearance:none;
             -moz-appearance:none;
-            -webkit-appearance:none;
+            -webkit-appearance:none; /*这三个是隐藏默认样式*/
         }
 
         /*以上是通用样式*/
@@ -88,19 +94,23 @@
 <p>input type="range"没改之前的默认样式</p>
 
 <div>
- <input type="range" class="slider-block" id="slider" max="18" min="6" step="1" value="6" onchange="moveMouse()">
+ <input type="range" class="slider-block" id="slider" max="18" min="6" step="1" value="6">
+    <!--主要是一个type="range"属性,其他的会在细分的文章里面讲出来-->
 </div>
 <p>input type="range"改变之后的样式</p>
 <div>
     <input id="shape2" name="box-shape" type="radio"  checked="checked" value="shape1" />
     <label for="shape1">对口箱</label>
 </div>
+
 <p>input type="radio"没改之前的默认样式</p>
 <form class="task10-main-box-shape" method="post" action="#">
+    <!--//表单元素基本上都要加form，传送的参数的方式，传递的位置，这是一个好习惯-->
 
 <div>
     <input id="shape1" name="box-shape" type="radio"  checked="checked" value="shape1" />
-    <label for="shape1">对口箱</label>
+    <!--checked属性是当页面载入的时候选择这个按钮，value是传送的值-->
+    <label for="shape1">对口箱</label><!--/加label标签点击这个字的时候，可以选中按钮-->
 </div>
 </form>
 <p>input type="radio"改了之后的样式</p>
