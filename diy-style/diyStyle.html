@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="#" rel="stylesheet" type="text/css"/>
+    <title>demo自定义修改样式</title>
+    <style type="text/css">
+        body{
+            width: 50%;
+            margin:5rem auto 0;
+        }
+        div{
+            margin: 2rem;
+        }
+        .slider-block{
+            outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 30%;
+            height: 0.3rem;
+            background: orange;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            -webkit-box-shadow:0 0 2px ;
+            width: 2.6rem;
+            height:1.6rem;
+            background: url("images/js2-d_03.png");
+            background-size: cover;
+        }
+        .task10-main-box-shape input[type="radio"]{
+            display: none;
+        }
+        .task10-main-box-shape label{
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            padding-left: 3rem;
+            margin-right: 6rem;
+            font-size: 1.8rem;
+            color: rgb(102,102,102);
+        }
+        .task10-main-box-shape label:before {
+            content: "";
+            display: inline-block;
+            background-color: #FFFFFF;
+            padding:0.45em;
+            border: 1px solid gray;
+            margin-right: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 3px;
+            border-radius: 50%;
+        }
+
+        input[type=radio]:checked + label:before {
+            font-size: 1px;
+            color: #FFFFFF;
+            border:0.7rem solid rgb(29,122,217);
+        }
+        .task10-main-box-row2-select{
+            font-size: 1.6rem;
+            color: rgb(153,153,153);
+            padding: 0.3% 2% 0.3% 1%;
+            margin: 0;
+            background: url("images/task10-d_03.png") no-repeat 97%;
+            background-size:20%;
+            appearance:none;
+            -moz-appearance:none;
+            -webkit-appearance:none;
+        }
+
+        /*以上是通用样式*/
+    </style>
+</head>
+
+<body>
+
+<h3>type range type radio select自定义样式</h3>
+<div>
+<input type="range">
+</div>
+<p>input type="range"没改之前的默认样式</p>
+
+<div>
+ <input type="range" class="slider-block" id="slider" max="18" min="6" step="1" value="6" onchange="moveMouse()">
+</div>
+<p>input type="range"改变之后的样式</p>
+<div>
+    <input id="shape2" name="box-shape" type="radio"  checked="checked" value="shape1" />
+    <label for="shape1">对口箱</label>
+</div>
+<p>input type="radio"没改之前的默认样式</p>
+<form class="task10-main-box-shape" method="post" action="#">
+
+<div>
+    <input id="shape1" name="box-shape" type="radio"  checked="checked" value="shape1" />
+    <label for="shape1">对口箱</label>
+</div>
+</form>
+<p>input type="radio"改了之后的样式</p>
+<div>
+    <select >
+        <option>查看详情</option>
+        <option>我也不知道</option>
+        <option>详情是什么</option>
+    </select>
+</div>
+<p>没改之前的默认样式</p>
+<div>
+    <select class="task10-main-box-row2-select">
+        <option>查看详情</option>
+        <option>我也不知道</option>
+        <option>详情是什么</option>
+    </select>
+</div>
+
+
+
+</body>
+</html>
