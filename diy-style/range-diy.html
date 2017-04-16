@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <title>js-text-demo</title>
+    <style type="text/css">
+        body{
+            width: 50%;
+            margin:5rem auto 0;
+        }
+        div{
+            margin: 2rem;
+        }
+        .js-2-1section3{
+            background: #fff;}
+        .js-2-1section3-div1{
+            margin-left: 2rem;}
+        .player-num{
+            font-size: 1.8rem;
+            margin:0 0.6rem;
+            background: #f4f5f5;
+            padding: 0.2rem 0.6rem;
+            color: gold;
+            width: 9%;
+            border: none;
+            outline: none;
+        }
+        span{
+            display: inline-block;
+            font-size: 1.8rem;
+            color: #444;
+        }
+
+        .js-2-1section3-div2{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1.6rem 0;
+        }
+
+        /*上面是玩家人数的css样式*/
+
+        .btn-sub{ /*这里是左边减的css样式*/
+            outline: none;
+            border: none;
+            cursor: pointer;
+            background: url("images/js2-f_03.png");
+            background-size: 100%;
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+        .btn-add{ /*这里是右边+符号的css样式*/
+            outline: none;
+            border: none;
+            cursor: pointer;
+            background: url("images/js2-e_03.png") no-repeat;
+            background-size: 100%;
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+
+
+        #slider{ /*设置滑块下面那条线的样式*/
+            outline: none; /*去掉点击时出现的外边框*/
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none; /*这三个是去掉那条线原有的默认样式，划重点！！*/
+            width: 30%;
+            height: 0.3rem;
+            background: orange;
+            /*这三个是设置滑块下面那条线的样式*/
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            /*::-webkit-slider-thumb是代表给滑块的样式进行变更*/
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none; /*//这三个是去掉滑块原有的默认样式，划重点！！*/
+            -webkit-box-shadow:0 0 2px ; /*设置滑块的阴影*/
+            width: 2.6rem;
+            height:1.6rem;
+            background: url("images/js2-d_03.png");
+            background-size: cover;
+            /*//这几个是设置滑块的样式*/
+        }
+
+        /*以上是chorm的功能实现*/
+
+        /*以下是I兼容E浏览器的滑块，还有一些问题，不过现在没空再弄了。等到有空了再解决清楚。*/
+        input[type=range]::-ms-fill-lower {
+            /*进度条已填充的部分*/
+            height: 22px;
+            border-radius: 10px;
+            /*background: black;*/
+            background: linear-gradient(to right, #059CFA, white 100%, white);
+        }
+
+        input[type=range]::-ms-fill-upper {
+            /*进度条未填充的部分*/
+            height: 22px;
+            border-radius: 10px;
+            background: red;
+        }
+        /*input[type=range]:focus::-ms-fill-lower {*/
+            /*background: linear-gradient(to right, #059CFA, white 100%, white);*/
+        /*}*/
+
+        /*input[type=range]:focus::-ms-fill-upper {*/
+            /*background: #ffffff;*/
+        /*}*/
+        /*以上是通用样式*/
+    </style>
+</head>
+
+<body>
+<div class="js-2-1section3">
+    <div class="js-2-1section3-div1">
+        <span class="js-2-1section3-div1-span1">玩家人数</span>
+        <input type="text" class="player-num" id="player"  value="6"  max="18" min="6" onblur="on_change()">
+        <!--onblur是当对象失去焦点的时候执行的函数-->
+        <span class="js-2-1section3-div1-span1">人</span>
+    </div><!--上面这部分是玩家人数方框的html-->
+    <div class="js-2-1section3-div2">
+        <button class="btn-sub" id="btnSub" onclick="less()" ></button><!--减value的按钮-->
+        <input type="range" class="slider-block" id="slider" max="18" min="6" step="1" value="6" onchange="moveChange()">
+        <!--onchange是当对象发生变化时执行的函数-->
+        <!--这里的value="6"的意思是浏览器进入时候滑块在最小值，也就是最右侧的地方，否则默认在中间-->
+        <button class="btn-add" id="btnAdd"  onclick="plus()"></button><!--加value的按钮-->
+    </div>
+</div>
+
+<script>
+    var oPlayerNum = document.getElementById("player");//玩家总人数
+    var osliderBlock = document.getElementById("slider");//滑块的值
+    function on_change() {
+        if (oPlayerNum.value >= 6 && oPlayerNum.value <= 18) {//设置方框里面玩家人数范围
+            osliderBlock.value=oPlayerNum.value ;//将玩家总人数赋值给滑块的值，实现动态变化
+        } else {
+            alert("请输入正确的人数6~18");
+            oPlayerNum.value=6;
+            osliderBlock.value=6;
+    //人数超出范围的话，弹出警告框，并且将方框和滑块的值重置为6
+        }
+    }
+    function moveChange() {// 滑块的值改变，运行这个函数
+        oPlayerNum.value=osliderBlock.value;
+        //滑块的值改变的话，滑块的值赋值给方框，实现动态变化
+    }
+    function less() {
+        oPlayerNum.value--;
+        //减的按钮，减掉玩家总人数的值
+        if (oPlayerNum.value<6){
+            alert("人太少了，再找几个小伙伴来吧");
+            oPlayerNum.value=6;
+            //人数超出范围的话，弹出警告框，并且将方框和滑块的值重置为6
+        }
+        else {
+            osliderBlock.value=oPlayerNum.value;// 将玩家人数赋值给滑轮的值
+        }
+    }
+    function plus() {
+        oPlayerNum.value++;
+        //加的按钮，减掉玩家总人数的值，上面的值已经相互关联了，所以方框的值改变，滑块的值也会改变
+        if (oPlayerNum.value>18){
+            alert("人太多了，可以分一批人再开一局");
+            oPlayerNum.value=18;
+            //人数超出范围的话，弹出警告框，并且将方框和滑块的值重置为18
+        }
+        else {
+            osliderBlock.value=oPlayerNum.value;// 将玩家人数赋值给滑轮的值
+        }
+    }
+</script>
+</body>
+</html>
