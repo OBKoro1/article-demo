@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="#" rel="stylesheet" type="text/css"/>
+    <title>闭包详解：demo</title>
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+<p>别看我，看console</p>
+<script>
+    var func=function(){
+        var a=1;
+        console.log(a); //输出:1
+    };
+    func();
+//    console.log ( a );
+    // a没有定义
+
+    function func1(){
+         a1=1;
+        console.log(a1); //输出:1
+        function func2() {//这个函数的内部操作，当做一个整体的变量。
+            a2=2;
+            console.log(a2);
+        }
+        func2();
+        console.log(a2);//这里没有定义,说明函数内部声明的a2是个局部变量
+
+    }
+//    func1();//调用函数
+    console.log(a1);//输出1
+//    console.log(a2);
+
+
+//    return func2();
+
+</script>
+
+</body>
+</html>

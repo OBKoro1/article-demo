@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="#" rel="stylesheet" type="text/css"/>
+    <title>js-text-demo</title>
+    <style type="text/css">
+        body{
+            width: 50%;
+            margin: 0 auto;
+        }
+        div{
+            width: 250px;
+            border: 1px solid gray;
+            margin: 2rem;
+        }
+        .word-wrap{
+            word-wrap: break-word;
+        }
+        .break-all{
+            word-break:break-all;
+        }
+        /*以上是通用样式*/
+    </style>
+</head>
+
+<body>
+<h2><a href="https://juejin.im/post/58f5ead2570c3500564a5c57">单词太长导致自动换行，出现空白区域。——word-wrap和word-break</a></h2>
+
+<div> 下面有一段很长的拼音长到没有朋友</div>
+<div>zheshiyiduanhenchangdepingyingchangdaomeiyoupengyou</div>
+
+<div>下面有一段加了word-wrap的英文单词，这里没有标点符号</div>
+<div class="word-wrap">zheshiyiduanhenchangdepingyingchangdaomeiyoupengyoushishikebukeyigengchangyidian</div>
+
+<div>下面有一段加了word-break:break-all的英文单词,这里没有标点符号</div>
+<div class="break-all">zheshiyiduanhenchangdepingyingchangdaomeiyoupengyoushishikebukeyigengchangyidian</div>
+<p>可以看到效果是一毛一样的</p>
+
+<div>下面有一段加了word-wrap的英文单词</div>
+<div class="word-wrap">zheshiyiduanhenchangdepingyingchangdaomei，youpengyoushishikebukeyigengchangyidian</div>
+
+<div>下面有一段加了word-break:break-all的英文单词</div>
+<div class="break-all">zheshiyiduanhenchangdepingyingchangdaomei，youpengyoushishikebukeyigengchangyidian</div>
+
+
+<p><b>注释：</b>目前 Opera 不支持 word-break 属性。</p>
+<p>英文单词不主动进行打断换行，不会自动换行，这样对我们页面效果影响很大。</p>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
