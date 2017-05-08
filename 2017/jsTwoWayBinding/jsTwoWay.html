@@ -9,25 +9,27 @@
 <!--这里是html内容-->
 <h1>原生js双向绑定及其应用</h1>
 <div class="js-2-1section2 col-sm-10 col-xs-10">
-    <div><input type="text" data-bind-1="peopleName" />
+    <div><input type="text" data-bind-1="peopleName"  id="text1"/>
         <!--data-bind-1="peopleName" 原生js双向绑定的格式-->
     </div>
-    <div><input  type="text" data-bind-2="killName" />
-
+    <div><input  type="text" data-bind-2="killName" id="text2" />
         <button class="btn btn-primary" onclick="randomGroup()">随机词组</button>
     </div>
+    <p data-bind-1="peopleName"></p>
+    <p data-bind-2="killName"></p>
+    <!--<p>手动输入框里面值的获取DBind1.attributes.peopleName</p>-->
 </div>
-<p><a href="#">掘金文章链接</a></p>
-<p><a href="#">掘金个人主页链接</a></p>
+<p><a href="https://juejin.im/post/590fce6b61ff4b0062534407">掘金文章链接</a></p>
+<p><a href="https://juejin.im/user/58714f0eb123db4a2eb95372">掘金个人主页链接</a></p>
 <!--下面这部分是生成原生js的代码-->
 <script>
     var DBind1 = new DBind( 1 );
-    var DBind2 = new DBind( 2 );//原生js双向绑定
+    var DBind2 = new DBind( 2 );//前面是变量，括号里面的是html那里填的数字
     DBind1.set( "peopleName", '第一个' );
-    DBind2.set( "killName", '第二个' );
+    DBind2.set( "killName", '第二个' );//第一个是刚才html格式那里的变量名，第二个方框是赋值
 
     function DataBinder( object_id ) {
-        // Create a simple PubSub object
+        // 创建一个简单的pubSub对象
         var pubSub = {
                     callbacks: {},
 
@@ -49,7 +51,7 @@
                 timeIn;
 
         changeHandler = function( evt ) {
-            var target = evt.target || evt.srcElement, // IE8 compatibility
+            var target = evt.target || evt.srcElement, //  IE8兼容
                     prop_name = target.getAttribute( data_attr );
 
             if ( prop_name && prop_name !== "" ) {
@@ -61,15 +63,15 @@
             }
         };
 
-        // Listen to change events and proxy to PubSub
+        // 监听事件变化，并代理到pubSub
         if ( document.addEventListener ) {
             document.addEventListener( "input", changeHandler, false );
         } else {
-            // IE8 uses attachEvent instead of addEventListener
+            // IE8使用attachEvent而不是addEventListenter
             document.attachEvent( "oninput", changeHandler );
         }
 
-        // PubSub propagates changes to all bound elements
+        // pubSub将变化传播到所有绑定元素
         pubSub.on( message, function( evt, prop_name, new_val ) {
             var elements = document.querySelectorAll("[" + data_attr + "=" + prop_name + "]"),
                     tag_name;
@@ -91,7 +93,7 @@
         var binder = new DataBinder( uid ),
 
                 user = {
-                    // ...
+                    // 属性设置器使用数据绑定器pubSub来发布
                     attributes: {},
                     set: function( attr_name, val ) {
                         this.attributes[ attr_name ] = val;
@@ -124,7 +126,7 @@
     function randomGroup() {
         var oGroup=[];//存放所有词汇的词组、
         for(var i=0;i<20;i++){
-            oGroup[i]={};//数组中的每个元素都是一个对象
+            oGroup[i]={};//设置数组中的每个元素都是一个对象
         }
         //一个一个定义他们状态的字符串，然后在下面赋值
         oGroup[0].people="降龙十八掌";
@@ -172,12 +174,10 @@
         oPeople=oGroup[oGroupNum].people;
         okiller=oGroup[oGroupNum].killer;//随机数的对应下标的状态字符串赋值给这个变量。
         console.log(oPeople,okiller);
-        DBind1.set( "peopleName", oPeople );
-        DBind2.set( "killName", okiller );//前面是html格式，后面是要在html页面显示的内容，字符串的话要加双引号
+        DBind1.set( "peopleName", oPeople );//将上面的状态字符串赋值给input框，。这一步将在界面中直接显示出来
+        DBind2.set( "killName", okiller );
     }
-
-
-
+//        console.log(DBind1.attributes.peopleName);//这里是封装好的手动输入框
 </script>
 </body>
 </html>
