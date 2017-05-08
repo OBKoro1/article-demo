@@ -37,7 +37,17 @@
         <entry file="file://$PROJECT_DIR$/jsTwoWay.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="500">
-              <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="40" column="78" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -89,6 +99,7 @@
         <option value="$PROJECT_DIR$/js-2.scss" />
         <option value="$PROJECT_DIR$/js-2-player.html" />
         <option value="$PROJECT_DIR$/newHtml.html" />
+        <option value="$PROJECT_DIR$/../../index.html" />
         <option value="$PROJECT_DIR$/jsTwoWay.html" />
       </list>
     </option>
@@ -219,12 +230,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1494216507102</updated>
-      <workItem from="1494216508558" duration="6301000" />
+      <workItem from="1494216508558" duration="6699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6301000" />
+    <option name="totallyTimeSpent" value="6699000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -304,10 +315,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="40" column="78" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jsTwoWay.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
           <folding />
         </state>
       </provider>
