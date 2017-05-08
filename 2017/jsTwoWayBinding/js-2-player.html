@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link href="js-2.css" rel="stylesheet" type="text/css"/>
+    <title>玩家数量配比页面</title>
+    <script>
+
+
+    </script>
+</head>
+<body>
+    <div class="js-2-1head">
+        <a ><div class="js-2-1head-img1" onclick="leftBtn()"></div></a>
+        <h4>参数设置</h4>
+        <a href="#" onclick="gameNo()" class="js-2-1head-img2"></a>
+    </div>
+    <!--头部结束，js-2-1main开始-->
+    <div class="js-2-1main">
+        <div class="container">
+            <div class="row">
+                    <div class="js-2-1section1 col-sm-10 col-xs-10">
+                        <div class="js-2-1section1-left">
+                            <span>玩家配比</span>
+                        </div>
+                        <div class="js-2-1section1-right">
+                            <div class="js-2-1section1-right1" id="roleShow">
+                                <ul class="role-list" id="role-ul">
+                                    <!--<li id="role-li">-->
+                                        <!--<span id="role-li-color">-->
+                                            <!--<span id="role-li-orange"></span>-->
+                                            <!--<span id="role-li-blue"></span>-->
+                                        <!--</span>-->
+                                        <!--<span id="role-li-p">1号-平民</span>-->
+                                    <!--</li>-->
+                                    <!--形象化li列表，帮助理解。-->
+                                </ul>
+                            </div>
+                            <div class="js-2-1section1-right2" >
+                                <div onclick="hit()">
+                                    <div>点击设置</div>
+                                    <span></span></div>
+                                </div>
+                        </div>
+                     </div>
+                    <div class="js-2-1section2 col-sm-10 col-xs-10">
+                        <div><input id="js-2-1section2-input1" onblur="getValue1()" type="text" data-bind-1="peopleName" placeholder="水民词组" maxlength="10" />
+                            <!--data-bind-1="peopleName" 原生js双向绑定的格式-->
+                        </div>
+                        <div><input id="js-2-1section2-input2" onblur="getValue2()" type="text" data-bind-2="killName"  placeholder="杀手词组"  maxlength="10"/>
+
+                            <button class="btn btn-primary" onclick="randomGroup()">随机词组</button>
+                        </div>
+                    </div>
+                <!-- section2结束，section3开始-->
+                <div class="js-2-1section3 col-sm-10 col-xs-10">
+                    <div class="js-2-1section3-div1">
+                        <span class="js-2-1section3-div1-span1">玩家人数</span>
+                        <input type="text" class="player-num" id="player"  value="6"  max="18" min="6" onblur="on_change()">
+                        <span class="js-2-1section3-div1-span1">人</span>
+                    </div>
+                    <div class="js-2-1section3-div2">
+                        <span></span>
+                        <button class="btn-sub" id="btnSub" onclick="less()" ></button>
+                        <input type="range" class="slider-block" id="slider" max="18" min="6" step="1" value="6" onchange="moveMouse()">
+                        <button class="btn-add" id="btnAdd"  onclick="plus()"></button>
+                        <span></span>
+                    </div>
+                </div>
+                <button class="js-2-1section4" onclick="btn()">去发牌</button>
+                </div>
+            </div>
+        </div>
+    <script  src="js2-play.js"></script>
+
+</body>
+</html>

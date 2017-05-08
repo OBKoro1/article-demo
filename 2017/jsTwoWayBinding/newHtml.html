@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="#" rel="stylesheet" type="text/css"/>
+    <title>js-text-demo</title>
+    <style>
+        body{
+            width: 70%;
+            margin: 0 auto;
+        }
+        div{
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+<h1>这是一个新页面</h1>
+<h1>这是一个新页面</h1>
+<h1>这是一个新页面</h1>
+<h1>这是一个新页面</h1>
+<h1>这是一个新页面</h1>
+<div id="data1"></div>
+<div id="data2"></div>
+<div id="data6"></div>
+<div id="data3"></div>
+<div id="data4"></div>
+<div id="data5"></div>
+<h1>以上是上个页面传递过来的参数的，我们可以利用这些参数来进行另外的操作。比如翻牌查看身份，然后杀人投票等。</h1>
+<script>
+    var data1=document.getElementById('data1');
+    var data2=document.getElementById('data2');
+    var data3=document.getElementById('data3');
+    var data4=document.getElementById('data4');
+    var data5=document.getElementById('data5');
+    var data6=document.getElementById('data6');
+    var wordGroup1=sessionStorage.wodGroup1;//传过来的水民词组
+    var wordGroup2=sessionStorage.wodGroup2;//传过来的杀手词组
+    var killNum=sessionStorage.kill;//传参过来的杀手人数
+    var playerNum=sessionStorage.all;//传参过来的玩家总人数
+    var smallNum=playerNum-killNum;//求值出来的水民人数
+    var group=sessionStorage.allNum;
+    Group = group.split(",");//group遇到","，分成数组中的元素
+    console.log("杀手人数"+killNum);
+    console.log("水民人数"+smallNum);
+    console.log("玩家总人数"+playerNum);
+    console.log(Group);
+    data1.innerHTML=wordGroup1;
+    data2.innerHTML=wordGroup2;
+    data6.innerHTML='玩家的身份:'+Group;
+    data3.innerHTML="杀手人数"+killNum;
+    data4.innerHTML="水民人数"+smallNum;
+    data5.innerHTML="玩家总人数"+playerNum;
+</script>
+</body>
+</html>
