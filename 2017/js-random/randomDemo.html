@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+
+            width: 50%;
+            margin:  8rem auto 0;
+        }
+    </style>
+</head>
+<body>
+<p>点击按钮执行：Math.random()——生成大于等于0.0且小于1.0的一个随机数</p>
+<input type="button" value="点我" onclick="begin1()">
+<p id="textA"></p>
+<p>点击按钮执行：Math.random()*20——取0~20之间的随机数</p>
+<input type="button" value="点我" onclick="begin2()">
+<p id="text1"></p>
+<p>点击按钮执行：Math.floor(Math.random()*20)——取0~20之间的随机整数</p>
+<input type="button" value="点我" onclick="begin3()">
+<p id="text2"></p>
+
+<p>点击按钮执行：Math.floor(Math.random()*(30-20+1)+20);——取20~30之间的随机整数</p>
+<input type="button" value="点我" onclick="begin4()">
+<p id="text3"></p>
+
+<p>点击按钮执行：Math.floor(Math.random()*(120-80+1)+80)——取80~120之间的随机整数</p>
+<input type="button" value="点我" onclick="begin5()">
+<p id="text4"></p>
+<p>点击按钮执行：Math.floor(Math.random()*(-10+30+1)-30)——取-10~-30之间的随机整数</p>
+<input type="button" value="点我" onclick="begin6()">
+<p id="text5"></p>
+
+<p>点击按钮执行：indexOf随机数组去重</p>
+<input type="button" value="点我" onclick="begin7()">
+<p id="text6"></p>
+
+<script>
+    var textA=document.getElementById('textA');
+    var text1=document.getElementById('text1');
+    var text2=document.getElementById('text2');
+    var text3=document.getElementById('text3');
+    var text4=document.getElementById('text4');
+    var text5=document.getElementById('text5');
+    var text6=document.getElementById('text6');
+
+    function begin1(){
+        textA.innerHTML=Math.random();
+    }
+    function begin2(){
+        text1.innerHTML=Math.random()*20;
+    }
+    function begin3(){
+        text2.innerHTML=Math.floor(Math.random()*20);
+    }
+    function begin4(){
+        text3.innerHTML=Math.floor(Math.random()*(30-20+1)+20);
+    }
+    function begin5(){
+        text4.innerHTML=Math.floor(Math.random()*(120-80+1)+80);
+    }
+    function begin6(){
+        text5.innerHTML=Math.floor(Math.random()*(-10+30+1)-30);
+    }
+    function begin7() {
+        var num=[];
+        while (num.length<3){//num.length代表数组的长度，当数组的长度不再满足小于3，跳出循环
+            var randomNum=Math.floor(Math.random()*9);//获得在0-9之间的随机数
+            if (num.indexOf(randomNum)<0){
+                //判断randomNum之前有没有在数组里面，如果没有，就添加进去，如果有，重新循环。
+                num.push(randomNum);
+                // 将randomNum这个随机数，添加到num这个数组里面。
+                console.log(num);
+            }
+        }
+        text6.innerHTML=num;
+    }
+</script>
+</body>
+</html>

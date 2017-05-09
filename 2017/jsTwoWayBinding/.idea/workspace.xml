@@ -23,17 +23,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="js-2-player.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="js-2-player.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js-2-player.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+            <state relative-caret-position="300">
+              <caret line="30" column="72" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jsTwoWay.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jsTwoWay.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jsTwoWay.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="475">
@@ -220,12 +220,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1494216507102</updated>
-      <workItem from="1494216508558" duration="17948000" />
+      <workItem from="1494216508558" duration="19831000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17948000" />
+    <option name="totallyTimeSpent" value="19831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -297,14 +297,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js-2-player.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8">
@@ -317,6 +309,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js-2-player.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="30" column="72" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
           <folding />
         </state>
       </provider>
