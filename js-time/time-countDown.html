@@ -47,7 +47,7 @@
 <body onload="startTime()">
 <h2>掘金文章链接：<a href="http://www.jianshu.com/p/3ec0dd690b56">倒计时跳转和获取实时时间</a></h2>
 <div class="box">
-    <div class="time">请等待<span id="dd">6</span>秒</div>
+    <div class="time">请等待<span id="dd">5</span>秒</div>//这里的5是初始6秒跳转。
     <img src="aaa.png" alt="启动页面图片"/>
     <div class="id-box">
         <div id="time"></div>
@@ -57,15 +57,18 @@
     <p>更多·更全·更好用</p>
     <script type="text/javascript">
         function run(){
-            var s = document.getElementById("dd");//获取dd，并获得数字
-            if(s.innerHTML == 1){// 当dd==1的时候，跳转链接并且暂停函数
+            var s = document.getElementById("dd");//获取dd的dom
+            if(s.innerHTML == 0){// 当dd==0的时候，跳转链接并且暂停函数
                 window.location.href = "https://juejin.im/user/58714f0eb123db4a2eb95372/article";
-                clearInterval(run());
-                //暂停setInterval调用的run()函数，setInterval调用了run(),
+                clearInterval(run());//取消由 setInterval() 设置的 timeout，，这里数字暂停在0这里，否则时间会继续往下减会出现负数。
+                //setInterval调用了run()，所以setInterval的返回ID值是run（）
             }
-            s.innerHTML = s.innerHTML -1;//跑一秒减一个数字
+            s.innerHTML = s.innerHTML -1;//从5秒开始，隔一秒跑一次run()然后减1
         }
-        window.setInterval("run();", 1000);// 一秒跑一次
+        window.setInterval("run();", 1000);//这段代码的效果是一秒调用一次run()，
+        //“run()”是要执行的代码块，1000是时间，默认单位是毫秒
+
+        // 下面这里是实时显示时间的代码。
         function checkTime(i){
             if (i<10){
                 i = "0" + i;
