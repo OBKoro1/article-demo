@@ -45,10 +45,9 @@
     </style>
 </head>
 <body onload="startTime()">
-<h2><a href="http://www.jianshu.com/p/3ec0dd690b56">倒计时跳转和获取实时时间</a></h2>
+<h2>掘金文章链接：<a href="http://www.jianshu.com/p/3ec0dd690b56">倒计时跳转和获取实时时间</a></h2>
 <div class="box">
     <div class="time">请等待<span id="dd">6</span>秒</div>
-    <!--设置时间长一点，不然一直跳转很烦-->
     <img src="aaa.png" alt="启动页面图片"/>
     <div class="id-box">
         <div id="time"></div>
@@ -59,21 +58,14 @@
     <script type="text/javascript">
         function run(){
             var s = document.getElementById("dd");//获取dd，并获得数字
-            if(s.innerHTML == 1){// 当dd==0的时候，跳转链接并且暂停函数
+            if(s.innerHTML == 1){// 当dd==1的时候，跳转链接并且暂停函数
                 window.location.href = "http://www.jianshu.com/u/8d1dd8c80f06";
-                clearInterval(run());//暂停setInterval调用的run()函数
+                clearInterval(run());
+                //暂停setInterval调用的run()函数，setInterval调用了run(),
             }
             s.innerHTML = s.innerHTML -1;//跑一秒减一个数字
         }
         window.setInterval("run();", 1000);// 一秒跑一次
-        /* innerHTML定义和用法
-         innerHTML 属性设置或返回表格行的开始和结束标签之间的 HTML（意思就是删除原来的样式，插入html的文字之类的）。*/
-        /*clearInterval定义和用法
-         clearInterval() 方法可取消由 setInterval() 设置的 timeout。（就是暂停）
-         clearInterval() 方法的参数必须是由 setInterval() 返回的 ID 值。（）*/
-        /*etInterval定义和用法
-         setInterval() 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式。
-         setInterval() 方法会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭。由 setInterval() 返回的 ID 值可用作 clearInterval() 方法的参数。*/
         function checkTime(i){
             if (i<10){
                 i = "0" + i;
