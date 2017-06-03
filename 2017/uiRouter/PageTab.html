@@ -4,11 +4,13 @@
 <div>
     <div>
         <h1>下面这几个按钮是在主页面下面再嵌套一层的页面</h1>
+        <!--ui-sref跳转-->
         <span style="width:100px" ui-sref=".Page1"><a href="">Page-1</a></span>
         <span style="width:100px" ui-sref=".Page2"><a href="">Page-2</a></span>
         <span style="width:100px" ui-sref=".Page3"><a href="">Page-3</a></span>
     </div>
     <div>
+        <!--PageTap嵌套的视图html展示的地方-->
         <div ui-view=""/>
     </div>
 </div>
