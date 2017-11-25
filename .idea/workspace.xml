@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="466213ec-f1ca-476e-a3df-3198919502e1" name="Default" comment="axios封装请求的文件">
+    <list default="true" id="466213ec-f1ca-476e-a3df-3198919502e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017/.idea/workspace.xml" afterPath="$PROJECT_DIR$/2017/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,17 +20,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="42" column="71" lean-forward="true" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
+            <state relative-caret-position="534">
+              <caret line="43" column="79" lean-forward="true" selection-start-line="43" selection-start-column="79" selection-end-line="43" selection-end-column="79" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demo.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="demo.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2017/cookieStorage/demo.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="325">
@@ -83,8 +82,8 @@
         <option value="$PROJECT_DIR$/2017/js-random/randomDemo.html" />
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/css_demo/demo1.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/2017/cookieStorage/demo.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -257,7 +256,7 @@
       <workItem from="1508932077708" duration="1012000" />
       <workItem from="1509866950176" duration="621000" />
       <workItem from="1510041996284" duration="284000" />
-      <workItem from="1511612316006" duration="516000" />
+      <workItem from="1511612316006" duration="716000" />
     </task>
     <task id="LOCAL-00001" summary="简历">
       <created>1497273704172</created>
@@ -287,11 +286,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509867191481</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="cookie storage">
+      <created>1511612977156</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1511612977156</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28810000" />
+    <option name="totallyTimeSpent" value="29010000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -324,7 +330,8 @@
     <MESSAGE value="简历" />
     <MESSAGE value="更新text" />
     <MESSAGE value="axios封装请求的文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="axios封装请求的文件" />
+    <MESSAGE value="cookie storage" />
+    <option name="LAST_COMMIT_MESSAGE" value="cookie storage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -503,14 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="42" column="71" lean-forward="true" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2017/cookieStorage/demo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -519,6 +518,14 @@
             <element signature="e#378#1462#0" expanded="false" />
             <element signature="e#1483#2054#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="43" column="79" lean-forward="true" selection-start-line="43" selection-start-column="79" selection-end-line="43" selection-end-column="79" />
+          <folding />
         </state>
       </provider>
     </entry>
