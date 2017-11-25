@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="466213ec-f1ca-476e-a3df-3198919502e1" name="Default" comment="">
+    <list default="true" id="466213ec-f1ca-476e-a3df-3198919502e1" name="Default" comment="cookie storage">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -112,6 +111,12 @@
               <item name="article-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="article-demo" type="462c0819:PsiDirectoryNode" />
               <item name="2017" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="article-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="article-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="2017" type="462c0819:PsiDirectoryNode" />
+              <item name="cookieStorage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -237,7 +242,7 @@
       <workItem from="1508932077708" duration="1012000" />
       <workItem from="1509866950176" duration="621000" />
       <workItem from="1510041996284" duration="284000" />
-      <workItem from="1511612316006" duration="977000" />
+      <workItem from="1511612316006" duration="1355000" />
     </task>
     <task id="LOCAL-00001" summary="简历">
       <created>1497273704172</created>
@@ -281,11 +286,32 @@
       <option name="project" value="LOCAL" />
       <updated>1511613056731</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="cookie storage">
+      <created>1511613317469</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1511613317469</updated>
+    </task>
+    <task id="LOCAL-00008" summary="cookie storage">
+      <created>1511613465834</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1511613465834</updated>
+    </task>
+    <task id="LOCAL-00009" summary="cookie storage">
+      <created>1511613553639</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1511613553639</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29271000" />
+    <option name="totallyTimeSpent" value="29649000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
