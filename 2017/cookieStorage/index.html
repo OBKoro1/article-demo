@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>本地存储</title>
+</head>
+<body>
+
+
+<div>打开控制台查看console</div>
+
+<script>
+  cookieFn();
+  strogeFn();
+function cookieFn() {
+  var dataCookie='110';
+  document.cookie = 'token' + "=" +dataCookie;//直接设置cookie
+  function getCookie(name) { //获取指定名称的cookie值
+    // (^| )name=([^;]*)(;|$),match[0]为与整个正则表达式匹配的字符串，match[i]为正则表达式捕获数组相匹配的数组；
+    var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+    if(arr != null) {
+      console.log(arr,'正则表达式捕获数组相匹配的数组');
+      return unescape(arr[2]);
+    }
+    return null;
+  }
+  var cookieData=getCookie('token');
+  console.log(cookieData,'获取指定名称的cookie值');
+  function setTime() {
+    //存储cookie值并且设置cookie过期时间
+    var date=new Date();
+    var expiresDays=10;//设置十天过期
+    date.setTime(date.getTime()+expiresDays*24*3600*1000);
+    document.cookie="userId=828;  expires="+date.toGMTString();
+    console.log(document.cookie,'存储cookie值并且设置cookie过期时间');
+  }
+  setTime();
+
+  function delCookie(cookieName1) {
+    //删除cookie
+    var date2=new Date();
+    date2.setTime(date2.getTime()-10001);//把时间设置为过去的时间，会自动删除
+    document.cookie= cookieName1+"=v; expires="+date2.toGMTString();
+    console.log(document.cookie,'删除cookie');
+  }
+  delCookie('userId');
+}
+function strogeFn() {
+  var name='sessionData';
+  var num=120;
+  sessionStorage.setItem(name,num);//存储数据
+  sessionStorage.setItem('value2',119);
+  let dataAll=sessionStorage.valueOf();//获取全部数据
+  console.log(dataAll,'获取全部数据');
+  var dataSession=sessionStorage.getItem(name);//获取指定键名数据
+  var dataSession2=sessionStorage.sessionData;//sessionStorage是js对象，也可以使用key的方式来获取值
+  console.log(dataSession,dataSession2,'获取指定键名数据');
+  sessionStorage.removeItem(name); //删除指定键名数据
+  console.log(dataAll,'获取全部数据1');
+  sessionStorage.clear();//清空缓存数据：localStorage.clear();
+  console.log(dataAll,'获取全部数据2');
+}
+
+
+</script>
+</body>
+</html>
